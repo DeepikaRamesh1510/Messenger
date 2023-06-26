@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		6BF4E5162A412ACF0012128A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5152A412ACF0012128A /* AppDelegate.swift */; };
 		6BF4E5182A412ACF0012128A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5172A412ACF0012128A /* SceneDelegate.swift */; };
-		6BF4E51A2A412ACF0012128A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5192A412ACF0012128A /* ViewController.swift */; };
 		6BF4E51D2A412ACF0012128A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF4E51B2A412ACF0012128A /* Main.storyboard */; };
 		6BF4E51F2A412AD20012128A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF4E51E2A412AD20012128A /* Assets.xcassets */; };
 		6BF4E5222A412AD20012128A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF4E5202A412AD20012128A /* LaunchScreen.storyboard */; };
+		6BF4E52D2A4256880012128A /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF4E52C2A4256880012128A /* Authentication.storyboard */; };
+		6BF4E5302A4256FC0012128A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E52F2A4256FC0012128A /* LoginViewController.swift */; };
+		6BF4E5362A4636840012128A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 6BF4E5352A4636840012128A /* KeychainAccess */; };
+		6BF4E5382A46375B0012128A /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5372A46375B0012128A /* RootNavigationController.swift */; };
+		6BF4E53C2A4638F20012128A /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E53B2A4638F20012128A /* UserDefaultsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6BF4E5122A412ACF0012128A /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF4E5152A412ACF0012128A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BF4E5172A412ACF0012128A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6BF4E5192A412ACF0012128A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF4E51C2A412ACF0012128A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BF4E51E2A412AD20012128A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BF4E5212A412AD20012128A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BF4E5232A412AD20012128A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF4E52C2A4256880012128A /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		6BF4E52F2A4256FC0012128A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6BF4E5372A46375B0012128A /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		6BF4E53B2A4638F20012128A /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF4E5362A4636840012128A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,58 @@
 		6BF4E5142A412ACF0012128A /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				6BF4E5152A412ACF0012128A /* AppDelegate.swift */,
-				6BF4E5172A412ACF0012128A /* SceneDelegate.swift */,
-				6BF4E5192A412ACF0012128A /* ViewController.swift */,
-				6BF4E51B2A412ACF0012128A /* Main.storyboard */,
+				6BF4E53A2A4638D90012128A /* UserDefaults */,
+				6BF4E52E2A4256940012128A /* ViewControllers */,
+				6BF4E52B2A42566C0012128A /* Storyboard */,
+				6BF4E52A2A42564D0012128A /* Main */,
+				6BF4E5292A42563C0012128A /* Views */,
 				6BF4E51E2A412AD20012128A /* Assets.xcassets */,
-				6BF4E5202A412AD20012128A /* LaunchScreen.storyboard */,
 				6BF4E5232A412AD20012128A /* Info.plist */,
 			);
 			path = Messenger;
+			sourceTree = "<group>";
+		};
+		6BF4E5292A42563C0012128A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6BF4E52A2A42564D0012128A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6BF4E5152A412ACF0012128A /* AppDelegate.swift */,
+				6BF4E5172A412ACF0012128A /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6BF4E52B2A42566C0012128A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6BF4E5202A412AD20012128A /* LaunchScreen.storyboard */,
+				6BF4E51B2A412ACF0012128A /* Main.storyboard */,
+				6BF4E52C2A4256880012128A /* Authentication.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6BF4E52E2A4256940012128A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BF4E52F2A4256FC0012128A /* LoginViewController.swift */,
+				6BF4E5372A46375B0012128A /* RootNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6BF4E53A2A4638D90012128A /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				6BF4E53B2A4638F20012128A /* UserDefaultsService.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,9 @@
 			dependencies = (
 			);
 			name = Messenger;
+			packageProductDependencies = (
+				6BF4E5352A4636840012128A /* KeychainAccess */,
+			);
 			productName = Messenger;
 			productReference = 6BF4E5122A412ACF0012128A /* Messenger.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 6BF4E5092A412ACF0012128A;
+			packageReferences = (
+				6BF4E5342A4636840012128A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 6BF4E5132A412ACF0012128A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF4E52D2A4256880012128A /* Authentication.storyboard in Resources */,
 				6BF4E5222A412AD20012128A /* LaunchScreen.storyboard in Resources */,
 				6BF4E51F2A412AD20012128A /* Assets.xcassets in Resources */,
 				6BF4E51D2A412ACF0012128A /* Main.storyboard in Resources */,
@@ -138,7 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF4E51A2A412ACF0012128A /* ViewController.swift in Sources */,
+				6BF4E5302A4256FC0012128A /* LoginViewController.swift in Sources */,
+				6BF4E5382A46375B0012128A /* RootNavigationController.swift in Sources */,
+				6BF4E53C2A4638F20012128A /* UserDefaultsService.swift in Sources */,
 				6BF4E5162A412ACF0012128A /* AppDelegate.swift in Sources */,
 				6BF4E5182A412ACF0012128A /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +418,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BF4E5342A4636840012128A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6BF4E5352A4636840012128A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BF4E5342A4636840012128A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6BF4E50A2A412ACF0012128A /* Project object */;
 }
