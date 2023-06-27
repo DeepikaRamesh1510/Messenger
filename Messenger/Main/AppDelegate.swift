@@ -8,13 +8,14 @@
 
 
 import UIKit
+import UserDefaultsService
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		
+		UserDefaultsService.instantiate(withSuiteName: AppConstants.suiteName)
 		// Override point for customization after application launch.
 		return true
 	}
@@ -36,3 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+struct AppConstants {
+	static var bundleId: String { Bundle.main.bundleIdentifier! }
+	static var suiteName: String { bundleId + "_suit_name" }
+}

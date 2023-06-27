@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B5649BC2A4A6D3E00C37185 /* UserDefaultsService in Frameworks */ = {isa = PBXBuildFile; productRef = 6B5649BB2A4A6D3E00C37185 /* UserDefaultsService */; };
 		6BF4E5162A412ACF0012128A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5152A412ACF0012128A /* AppDelegate.swift */; };
 		6BF4E5182A412ACF0012128A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5172A412ACF0012128A /* SceneDelegate.swift */; };
 		6BF4E51D2A412ACF0012128A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF4E51B2A412ACF0012128A /* Main.storyboard */; };
@@ -16,7 +17,7 @@
 		6BF4E5302A4256FC0012128A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E52F2A4256FC0012128A /* LoginViewController.swift */; };
 		6BF4E5362A4636840012128A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 6BF4E5352A4636840012128A /* KeychainAccess */; };
 		6BF4E5382A46375B0012128A /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E5372A46375B0012128A /* RootNavigationController.swift */; };
-		6BF4E53C2A4638F20012128A /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E53B2A4638F20012128A /* UserDefaultsService.swift */; };
+		6BF4E53C2A4638F20012128A /* UserDefaultsService+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4E53B2A4638F20012128A /* UserDefaultsService+Support.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,7 @@
 		6BF4E52C2A4256880012128A /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		6BF4E52F2A4256FC0012128A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BF4E5372A46375B0012128A /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
-		6BF4E53B2A4638F20012128A /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		6BF4E53B2A4638F20012128A /* UserDefaultsService+Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaultsService+Support.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF4E5362A4636840012128A /* KeychainAccess in Frameworks */,
+				6B5649BC2A4A6D3E00C37185 /* UserDefaultsService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +115,7 @@
 		6BF4E53A2A4638D90012128A /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				6BF4E53B2A4638F20012128A /* UserDefaultsService.swift */,
+				6BF4E53B2A4638F20012128A /* UserDefaultsService+Support.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 			name = Messenger;
 			packageProductDependencies = (
 				6BF4E5352A4636840012128A /* KeychainAccess */,
+				6B5649BB2A4A6D3E00C37185 /* UserDefaultsService */,
 			);
 			productName = Messenger;
 			productReference = 6BF4E5122A412ACF0012128A /* Messenger.app */;
@@ -167,6 +170,7 @@
 			mainGroup = 6BF4E5092A412ACF0012128A;
 			packageReferences = (
 				6BF4E5342A4636840012128A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				6B5649BA2A4A6D3E00C37185 /* XCRemoteSwiftPackageReference "UserDefaultsService" */,
 			);
 			productRefGroup = 6BF4E5132A412ACF0012128A /* Products */;
 			projectDirPath = "";
@@ -198,7 +202,7 @@
 			files = (
 				6BF4E5302A4256FC0012128A /* LoginViewController.swift in Sources */,
 				6BF4E5382A46375B0012128A /* RootNavigationController.swift in Sources */,
-				6BF4E53C2A4638F20012128A /* UserDefaultsService.swift in Sources */,
+				6BF4E53C2A4638F20012128A /* UserDefaultsService+Support.swift in Sources */,
 				6BF4E5162A412ACF0012128A /* AppDelegate.swift in Sources */,
 				6BF4E5182A412ACF0012128A /* SceneDelegate.swift in Sources */,
 			);
@@ -420,6 +424,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6B5649BA2A4A6D3E00C37185 /* XCRemoteSwiftPackageReference "UserDefaultsService" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DeepikaRamesh1510/UserDefaultsService.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		6BF4E5342A4636840012128A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:kishikawakatsumi/KeychainAccess.git";
@@ -431,6 +443,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6B5649BB2A4A6D3E00C37185 /* UserDefaultsService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B5649BA2A4A6D3E00C37185 /* XCRemoteSwiftPackageReference "UserDefaultsService" */;
+			productName = UserDefaultsService;
+		};
 		6BF4E5352A4636840012128A /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6BF4E5342A4636840012128A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
