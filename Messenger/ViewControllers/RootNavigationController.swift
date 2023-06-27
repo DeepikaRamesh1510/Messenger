@@ -10,22 +10,25 @@
 import UIKit
 
 class RootNavigationController: UINavigationController {
+	
+	var viewModel: RootNavigationViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		self.viewModel = RootNavigationViewModel()
+		checkAndSetRootVC()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	
+	func checkAndSetRootVC() {
+		let rootVC: UIViewController = {
+			switch viewModel.isUserLoggedIn {
+				case true:
+					return AppViewControllers.baseTabBar.viewController
+				case false:
+					return AppViewControllers.login.viewController
+			}
+		}()
+		self.setViewControllers([rootVC], animated: true)
+	}
 
 }
