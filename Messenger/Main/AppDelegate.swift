@@ -9,6 +9,7 @@
 
 import UIKit
 import UserDefaultsService
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	) -> Bool {
 		
 		UserDefaultsService.instantiate(withSuiteName: AppConstants.suiteName)
-		// Override point for customization after application launch.
+		FirebaseApp.configure()
 		return true
 	}
 
